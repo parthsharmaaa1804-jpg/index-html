@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Learn Coding</title>
+<style>
+body { font-family:sans-serif; background:linear-gradient(to right,#fbc2eb,#a6c1ee); text-align:center; margin:0; padding:0; color:#333; }
+header { padding:20px; font-size:24px; font-weight:bold; }
+section { background:white; max-width:600px; margin:20px auto; padding:20px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.2);}
+button { padding:10px 15px; margin-top:10px; font-size:16px; border-radius:5px; border:none; cursor:pointer; }
+button:hover { background:#fbc2eb; color:white; }
+pre { background:#eee; padding:10px; border-radius:5px; text-align:left; }
+</style>
+</head>
+<body>
+<header>💻 Learn HTML / CSS / JS</header>
+
+<section>
+<h2>Try HTML Example</h2>
+<pre id="htmlCode">&lt;h1&gt;Hello World!&lt;/h1&gt;</pre>
+<button onclick="runHTML()">Run HTML</button>
+<iframe id="htmlResult" style="width:100%;height:100px;margin-top:10px;"></iframe>
+</section>
+
+<div style="margin:20px;">
+<button onclick="alert('Support me!')">💰 Donate / Support</button>
+<p>Ad placeholder</p>
+</div>
+
+<script>
+function runHTML(){
+    let code=document.getElementById("htmlCode").innerText;
+    let iframe=document.getElementById("htmlResult");
+    iframe.contentDocument.open();
+    iframe.contentDocument.write(code);
+    iframe.contentDocument.close();
+}
+</script>
+</body>
+</html>
